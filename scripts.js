@@ -1,35 +1,33 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Animación de Entrada "Sparkle Pop"
+
     const revealItems = document.querySelectorAll('.reveal-item');
     revealItems.forEach((item) => {
-        // Usa Intersection Observer para detectar cuando el elemento entra en vista
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    const delay = parseInt(item.getAttribute('data-delay')) * 100; // Retraso secuencial
+                    const delay = parseInt(item.getAttribute('data-delay')) * 100; 
                     setTimeout(() => {
                         item.classList.add('active');
                     }, delay);
-                    observer.unobserve(item); // Deja de observar una vez que se activa
+                    observer.unobserve(item); 
                 }
             });
-        }, { threshold: 0.1 }); // Se activa cuando el 10% del elemento es visible
+        }, { threshold: 0.1 }); 
         observer.observe(item);
     });
 
-    // 2. Generación de Estrellas Flotantes de Fondo
     const starsContainer = document.querySelector('.background-stars');
-    for (let i = 0; i < 50; i++) { // 50 estrellas
+    for (let i = 0; i < 50; i++) { 
         const star = document.createElement('div');
         star.className = 'star';
-        star.style.width = star.style.height = `${Math.random() * 3 + 1}px`; // Tamaño aleatorio
+        star.style.width = star.style.height = `${Math.random() * 3 + 1}px`; 
         star.style.left = `${Math.random() * 100}%`;
         star.style.top = `${Math.random() * 100}%`;
-        star.style.animationDelay = `${Math.random() * 5}s`; // Retraso de animación aleatorio
+        star.style.animationDelay = `${Math.random() * 5}s`; 
         starsContainer.appendChild(star);
     }
 
-    // 3. Glitch en el Título al cargar (simple)
+
     const title = document.querySelector('.uma-title');
     title.style.opacity = 0;
     setTimeout(() => {
@@ -41,9 +39,9 @@ document.addEventListener('DOMContentLoaded', () => {
             span.style.display = 'inline-block';
             span.style.animation = 'glitchText 0.3s ease-out forwards';
         });
-    }, 100); // Pequeño retraso para ver el glitch
+    }, 100); 
 
-    // CSS para el glitch del título
+
     const styleSheet = document.createElement("style");
     styleSheet.type = "text/css";
     styleSheet.innerText = `
@@ -60,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.head.appendChild(styleSheet);
 
 
-    // 4. Partículas de Brillo al hacer Click
+
     document.addEventListener('mousedown', (e) => {
         for (let i = 0; i < 15; i++) {
             const sparkle = document.createElement('div');

@@ -1,6 +1,6 @@
 :root {
-    --primary-color: #ff0077; /* Rosa intenso */
-    --secondary-color: #00f2ff; /* Cian brillante */
+    --primary-color: #ff0077; 
+    --secondary-color: #00f2ff;
     --bg-dark: #0a0a0c;
 }
 
@@ -11,10 +11,10 @@ body {
     color: white;
     font-family: 'Segoe UI', Arial, sans-serif;
     overflow-x: hidden;
-    perspective: 1000px; /* Para animaciones 3D */
+    perspective: 1000px; 
 }
 
-/* Fondo con Gradiente Animado */
+
 .animated-gradient-bg {
     position: fixed;
     top: 0;
@@ -33,7 +33,7 @@ body {
     100% { background-position: 0% 50%; }
 }
 
-/* Estrellas Flotantes de Fondo (generadas por JS) */
+
 .background-stars {
     position: fixed;
     top: 0;
@@ -41,7 +41,7 @@ body {
     width: 100%;
     height: 100%;
     z-index: -1;
-    pointer-events: none; /* No interfieren con clics */
+    pointer-events: none; 
 }
 
 .star {
@@ -57,7 +57,7 @@ body {
     50% { opacity: 1; transform: scale(1); }
 }
 
-/* Header y Título Glitch */
+
 header {
     text-align: center;
     padding: 60px 20px;
@@ -76,7 +76,7 @@ header {
     animation: initialGlitch 1s ease-out forwards;
 }
 
-/* Contenedores de Media */
+
 .video-container, .character-grid {
     display: flex;
     flex-wrap: wrap;
@@ -87,11 +87,11 @@ header {
     margin: 0 auto;
 }
 
-/* Estilo de la tarjeta de medios con marco de neón */
+
 .media-card {
     position: relative;
-    width: 315px; /* Ancho fijo para videos/imágenes */
-    height: 560px; /* Alto fijo para videos/imágenes */
+    width: 315px; 
+    height: 560px; 
     border-radius: 15px;
     overflow: hidden;
     box-shadow: 0 8px 25px rgba(0,0,0,0.6);
@@ -115,15 +115,15 @@ header {
     z-index: 1;
 }
 
-/* Marco de Neón Animado */
+
 .neon-border {
     position: absolute;
-    inset: -5px; /* Se extiende un poco más allá de la tarjeta */
+    inset: -5px; 
     border-radius: 20px;
     background: linear-gradient(45deg, var(--primary-color), var(--secondary-color), var(--primary-color));
     background-size: 400% 400%;
     animation: neonPulse 3s ease infinite;
-    filter: blur(8px); /* Efecto de brillo */
+    filter: blur(8px); 
     z-index: 0;
     opacity: 0.7;
 }
@@ -134,11 +134,11 @@ header {
     100% { background-position: 0% 50%; }
 }
 
-/* Animación de Entrada "Sparkle Pop" */
+
 .reveal-item {
     opacity: 0;
     transform: scale(0.5) translateY(50px) rotateX(30deg);
-    transition: all 0.7s cubic-bezier(0.23, 1, 0.32, 1.0); /* Animación elástica */
+    transition: all 0.7s cubic-bezier(0.23, 1, 0.32, 1.0); 
     filter: blur(5px);
 }
 
@@ -148,7 +148,7 @@ header {
     filter: blur(0);
 }
 
-/* Partículas del clic (generadas por JS) */
+
 .click-sparkle {
     position: fixed;
     width: 8px;
